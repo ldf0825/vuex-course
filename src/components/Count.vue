@@ -1,5 +1,5 @@
 <template>
-  <div id="Count">Count.vue{{count}}</div>
+  <div id="Count">{{count}}</div>
 </template>
 
 <script>
