@@ -12,19 +12,16 @@ export default new Vuex.Store({
       { id: 2, title: "todo item 2", completed: true },
       { id: 3, title: "todo item 3", completed: true },
     ],
-
   },
   getters: {
-    getCount: state => ++state.count,
-    // count(state) {
-    //   return ++state.count
-    // }
+    getCount: state => state.count,
     completedTodos: state => state.todos.filter(todo => todo.completed),
     completedTodosCount: (state, getters) => getters.completedTodos.length,
     getTodosById: state => id => state.todos.find(todo => todo.id == id)
   },
   mutations: {
-
+    incrementCount: state => state.count++,
+    decrementCount: (state, n) => state.count -= n.amount
   },
   actions: {
 
